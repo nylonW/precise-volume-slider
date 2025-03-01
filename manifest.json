@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Volume Control Slider",
+  "name": "Precise Volume Control Slider",
   "version": "1.0",
-  "description": "Adds a full-width volume control slider under YouTube videos",
+  "description": "Adds a full-width volume control slider under videos on popular site",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

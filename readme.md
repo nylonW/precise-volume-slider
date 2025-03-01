@@ -1,14 +1,14 @@
-# YouTube Volume Control Slider Extension
+# Volume Control Slider Extension
 
-A Chrome extension that adds a full-width volume control slider under YouTube videos.
+A Chrome extension that adds a full-width volume control slider under videos.
 
 ## Features
 
-- Adds a clean, full-width volume slider beneath YouTube videos
-- Syncs with YouTube's built-in volume controls
+- Adds a clean, full-width volume slider beneath videos
+- Syncs with the built-in volume controls
 - Displays current volume percentage
 - Click the volume icon to mute/unmute
-- Multiple insertion methods to ensure reliability across YouTube's layout updates
+- Multiple insertion methods to ensure reliability across layout updates
 
 ## Installation
 
@@ -24,7 +24,7 @@ A Chrome extension that adds a full-width volume control slider under YouTube vi
 
 ## Usage
 
-1. Navigate to any YouTube video page
+1. Navigate to any video page
 2. The volume slider will automatically appear beneath the video
 3. Drag the slider to adjust volume
 4. Click the speaker icon to mute/unmute
@@ -33,13 +33,13 @@ A Chrome extension that adds a full-width volume control slider under YouTube vi
 ## Files
 
 - `manifest.json` - Extension metadata and permissions
-- `content.js` - Main script that runs on YouTube pages
+- `content.js` - Main script that runs on video pages
 - `styles.css` - CSS styling for the volume slider
 - `icons/` - Extension icons in various sizes
 
 ## Notes
 
-This extension only runs on YouTube video pages (URLs matching `*://*.youtube.com/watch*`).
+This extension only runs on video pages (URLs matching `*://*.youtube.com/watch*`).
 
 ## License
 

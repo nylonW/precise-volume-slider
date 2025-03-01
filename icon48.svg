@@ -1,9 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <rect width="48" height="48" fill="#FF0000" rx="6" ry="6"/>
-  <rect x="6" y="21" width="9" height="6" fill="white"/>
-  <path d="M15 21 L24 12 L24 36 L15 27 Z" fill="white"/>
-  <path d="M28.5 13.5 C33 18 33 30 28.5 34.5" stroke="white" fill="none" stroke-width="3"/>
-  <path d="M33 9 C39 15 39 33 33 39" stroke="white" fill="none" stroke-width="3"/>
-  <path d="M5 24 L43 24" stroke="white" fill="none" stroke-width="1.5" stroke-dasharray="1.5,1.5"/>
-  <circle cx="19" cy="24" r="2" fill="#FF0000" stroke="white" stroke-width="1"/>
+  <!-- Background -->
+  <rect width="48" height="48" fill="#F5F5F5" rx="8" ry="8"/>
+  
+  <!-- Rounded player background -->
+  <rect width="42" height="26" fill="#282828" rx="5" ry="5" x="3" y="6"/>
+  
+  <!-- Red play area -->
+  <rect width="36" height="18" fill="#FF0000" rx="3" ry="3" x="6" y="9"/>
+  
+  <!-- Slider track -->
+  <rect width="32" height="4" fill="#444444" rx="2" ry="2" x="8" y="36"/>
+  
+  <!-- Slider thumb -->
+  <circle cx="22" cy="38" r="3.5" fill="white" stroke="#444444" stroke-width="1"/>
 </svg>

@@ -1,0 +1,23 @@
+# Ignore zip files created for Chrome Web Store submission
+*.zip
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore editor/IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore node modules if you add them in the future
+node_modules/
+
+# Ignore any local environment files
+.env
+.env.local
+
+# Ignore any build or distribution directories
+dist/
+build/ 

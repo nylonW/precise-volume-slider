@@ -24,7 +24,7 @@ function createSvgIcon(pathData) {
 
 // Function to create and insert the volume slider
 function insertVolumeSlider() {
-    console.log("YouTube Volume Slider: Starting insertion attempt");
+    console.log("Volume Slider: Starting insertion attempt");
     
     // Remove any existing slider
     const existingSlider = document.querySelector('.yt-custom-volume-container');
@@ -35,14 +35,14 @@ function insertVolumeSlider() {
     // Check if video exists
     const videoPlayer = document.querySelector('video');
     if (!videoPlayer) {
-        console.log("YouTube Volume Slider: No video element found");
+        console.log("Volume Slider: No video element found");
         return false;
     }
     
     // Find the target location to insert the slider
     const aboveTheFold = document.querySelector('#above-the-fold');
     if (!aboveTheFold) {
-        console.log("YouTube Volume Slider: No #above-the-fold element found");
+        console.log("Volume Slider: No #above-the-fold element found");
         return false;
     }
     
@@ -51,7 +51,7 @@ function insertVolumeSlider() {
     const middleRow = document.querySelector('#middle-row');
     
     if (!topRow) {
-        console.log("YouTube Volume Slider: No #top-row element found");
+        console.log("Volume Slider: No #top-row element found");
         return false;
     }
     
@@ -130,18 +130,18 @@ function insertVolumeSlider() {
     if (middleRow) {
         // Insert at the beginning of middle-row if it exists
         middleRow.insertBefore(volumeContainer, middleRow.firstChild);
-        console.log("YouTube Volume Slider: Inserted into middle-row");
+        console.log("Volume Slider: Inserted into middle-row");
     } else if (topRow.nextElementSibling) {
         // Insert after top-row
         aboveTheFold.insertBefore(volumeContainer, topRow.nextElementSibling);
-        console.log("YouTube Volume Slider: Inserted after top-row");
+        console.log("Volume Slider: Inserted after top-row");
     } else {
         // Fallback - append to above-the-fold
         aboveTheFold.appendChild(volumeContainer);
-        console.log("YouTube Volume Slider: Appended to above-the-fold");
+        console.log("Volume Slider: Appended to above-the-fold");
     }
     
-    // Sync with YouTube's native volume control
+    // Sync with native volume control
     const observer = new MutationObserver(function() {
         if (!videoPlayer.muted) {
             volumeSlider.value = videoPlayer.volume * 100;
@@ -157,18 +157,18 @@ function insertVolumeSlider() {
         attributeFilter: ['volume', 'muted'] 
     });
     
-    console.log("YouTube Volume Slider: Successfully created and inserted");
+    console.log("Volume Slider: Successfully created and inserted");
     return true;
 }
 
 // Alternative insertion method that targets different elements
 function alternativeInsertion() {
-    console.log("YouTube Volume Slider: Trying alternative insertion method");
+    console.log("Volume Slider: Trying alternative insertion method");
     
     // Get the video player
     const videoPlayer = document.querySelector('video');
     if (!videoPlayer) {
-        console.log("YouTube Volume Slider: No video element found (alternative)");
+        console.log("Volume Slider: No video element found (alternative)");
         return false;
     }
     
@@ -180,7 +180,7 @@ function alternativeInsertion() {
     }
     
     if (!targetElement) {
-        console.log("YouTube Volume Slider: No suitable target element found (alternative)");
+        console.log("Volume Slider: No suitable target element found (alternative)");
         return false;
     }
     
@@ -259,14 +259,14 @@ function alternativeInsertion() {
     const videoTitle = document.querySelector('#title.ytd-watch-metadata');
     if (videoTitle) {
         targetElement.insertBefore(volumeContainer, videoTitle.nextSibling);
-        console.log("YouTube Volume Slider: Inserted after video title");
+        console.log("Volume Slider: Inserted after video title");
     } else {
         // Fallback - just prepend to the target
         targetElement.prepend(volumeContainer);
-        console.log("YouTube Volume Slider: Prepended to target element");
+        console.log("Volume Slider: Prepended to target element");
     }
     
-    // Sync with YouTube's native volume control
+    // Sync with native volume control
     const observer = new MutationObserver(function() {
         if (!videoPlayer.muted) {
             volumeSlider.value = videoPlayer.volume * 100;
@@ -282,18 +282,18 @@ function alternativeInsertion() {
         attributeFilter: ['volume', 'muted'] 
     });
     
-    console.log("YouTube Volume Slider: Alternative insertion successful");
+    console.log("Volume Slider: Alternative insertion successful");
     return true;
 }
 
 // Last resort method - direct insertion into body with absolute positioning
 function lastResortInsertion() {
-    console.log("YouTube Volume Slider: Trying last resort insertion method");
+    console.log("Volume Slider: Trying last resort insertion method");
     
     // Get the video player
     const videoPlayer = document.querySelector('video');
     if (!videoPlayer) {
-        console.log("YouTube Volume Slider: No video element found (last resort)");
+        console.log("Volume Slider: No video element found (last resort)");
         return false;
     }
     
@@ -371,7 +371,7 @@ function lastResortInsertion() {
     // Append to body
     document.body.appendChild(volumeContainer);
     
-    // Sync with YouTube's native volume control
+    // Sync with native volume control
     const observer = new MutationObserver(function() {
         if (!videoPlayer.muted) {
             volumeSlider.value = videoPlayer.volume * 100;
@@ -387,7 +387,7 @@ function lastResortInsertion() {
         attributeFilter: ['volume', 'muted'] 
     });
     
-    console.log("YouTube Volume Slider: Last resort insertion successful");
+    console.log("Volume Slider: Last resort insertion successful");
     return true;
 }
 
@@ -410,7 +410,7 @@ function tryAllInsertionMethods() {
 
 // Wait for the page to load, then try to insert the slider
 function init() {
-    console.log("YouTube Volume Slider: Initializing");
+    console.log("Volume Slider: Initializing");
     
     // Remove any existing sliders
     const existingSliders = document.querySelectorAll('.yt-custom-volume-container, .yt-custom-volume-container-absolute');
@@ -425,7 +425,7 @@ setTimeout(init, 2000);
 
 // Re-run on navigation changes
 window.addEventListener('yt-navigate-finish', function() {
-    console.log("YouTube Volume Slider: YouTube navigation detected");
+    console.log("Volume Slider: navigation detected");
     setTimeout(init, 2000);
 });
 
@@ -435,9 +435,9 @@ setInterval(function() {
     const videoExists = document.querySelector('video');
     
     if (videoExists && !sliderExists) {
-        console.log("YouTube Volume Slider: Reinserting slider");
+        console.log("Volume Slider: Reinserting slider");
         init();
     }
 }, 10000);
 
-console.log("YouTube Volume Slider: Script loaded");
+console.log("Volume Slider: Script loaded");
