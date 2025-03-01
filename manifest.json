@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Volume Control Slider",
+  "version": "1.0",
+  "description": "Adds a full-width volume control slider under YouTube videos",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": []
+}
